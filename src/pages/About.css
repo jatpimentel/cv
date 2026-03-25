@@ -1,0 +1,473 @@
+/* ── Google Fonts ─────────────────────────────────────── */
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@700;800&display=swap");
+
+/* ── CSS Reset / Base ─────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Page Shell ───────────────────────────────────────── */
+.about-page {
+  background-color: #161b27;
+  color: #ffffff;
+  font-family: "Barlow", sans-serif;
+  min-height: 100vh;
+}
+
+/* ── Shared eyebrow label ─────────────────────────────── */
+.section-eyebrow {
+  font-family: "Barlow", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #e8522a;
+  margin-bottom: 14px;
+}
+.section-eyebrow.light {
+  color: #e8522a;
+}
+
+/* ══════════════════════════════════════════════════════
+   HERO SECTION  (cream background — mirrors Services hero)
+══════════════════════════════════════════════════════ */
+.about-hero {
+  background-color: #f5f0e8;
+  color: #1a1f2e;
+  padding: 140px 80px 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.about-hero .section-eyebrow {
+  color: #e8522a;
+}
+
+.about-hero-title {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 800;
+  font-size: clamp(48px, 6vw, 82px);
+  line-height: 1.0;
+  color: #1a1f2e;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+.about-hero-title span {
+  color: #e8522a;
+}
+
+.about-hero-body {
+  font-family: "Barlow", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.85;
+  color: #444;
+  max-width: 440px;
+  margin-bottom: 36px;
+}
+
+/* CTA buttons */
+.hero-cta {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  background: #e8522a;
+  color: #fff;
+  font-family: "Barlow", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 13px 30px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.2s, transform 0.15s;
+}
+.btn-primary:hover {
+  background: #cf4220;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: #1a1f2e;
+  font-family: "Barlow", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 13px 30px;
+  border: 1.5px solid rgba(26, 31, 46, 0.3);
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: border-color 0.2s, color 0.2s;
+}
+.btn-outline:hover {
+  border-color: #1a1f2e;
+  color: #1a1f2e;
+}
+
+/* Photo / avatar column */
+.hero-photo-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-avatar {
+  width: 280px;
+  height: 340px;
+  background: #f5c842;
+  border-radius: 140px 140px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-avatar-initials {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 800;
+  font-size: 72px;
+  color: rgba(0, 0, 0, 0.12);
+  letter-spacing: -3px;
+  user-select: none;
+}
+
+/* ══════════════════════════════════════════════════════
+   STATS BAR
+══════════════════════════════════════════════════════ */
+.stats-bar {
+  background: #1d2236;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.stat-item {
+  padding: 36px 40px;
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+  text-align: left;
+}
+.stat-item:last-child {
+  border-right: none;
+}
+
+.stat-value {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 800;
+  font-size: 48px;
+  color: #e8522a;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.stat-label {
+  font-family: "Barlow", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.38);
+  letter-spacing: 0.5px;
+}
+
+/* ══════════════════════════════════════════════════════
+   PROFILE SECTION  (dark)
+══════════════════════════════════════════════════════ */
+.profile-section {
+  padding: 90px 80px;
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 100px;
+  align-items: start;
+}
+
+.profile-section-title {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 800;
+  font-size: clamp(32px, 3.5vw, 50px);
+  color: #ffffff;
+  line-height: 1.05;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+  margin-bottom: 0;
+}
+
+.profile-text {
+  font-family: "Barlow", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 20px;
+}
+.profile-text:last-of-type {
+  margin-bottom: 28px;
+}
+
+/* Highlight pills */
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.pill {
+  font-family: "Barlow", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #e8522a;
+  background: rgba(232, 82, 42, 0.1);
+  border: 1px solid rgba(232, 82, 42, 0.28);
+  padding: 5px 13px;
+  border-radius: 3px;
+}
+
+/* ══════════════════════════════════════════════════════
+   SKILLS SECTION  (cream — mirrors Services light section)
+══════════════════════════════════════════════════════ */
+.about-skills-section {
+  background-color: #f5f0e8;
+  padding: 90px 80px;
+}
+
+.about-skills-section .section-eyebrow {
+  color: #e8522a;
+}
+
+.skills-section-title {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 800;
+  font-size: clamp(32px, 4vw, 54px);
+  color: #1a1f2e;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+  margin-bottom: 50px;
+  line-height: 1.05;
+}
+
+.skills-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.skill-card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 30px 28px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.skill-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: #e8522a;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+  border-radius: 3px 3px 0 0;
+}
+.skill-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+.skill-card:hover::before {
+  transform: scaleX(1);
+}
+
+.skill-card-category {
+  font-family: "Barlow", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(26, 31, 46, 0.38);
+  margin-bottom: 14px;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.skill-tag {
+  font-family: "Barlow", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #1a1f2e;
+  background: #f0ece4;
+  padding: 5px 11px;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+}
+.skill-card:hover .skill-tag {
+  background: rgba(232, 82, 42, 0.1);
+  color: #e8522a;
+}
+
+/* ══════════════════════════════════════════════════════
+   EDUCATION SECTION  (dark)
+══════════════════════════════════════════════════════ */
+.edu-section {
+  padding: 90px 80px;
+}
+
+.edu-section-title {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 800;
+  font-size: clamp(32px, 3.5vw, 50px);
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+  margin-bottom: 50px;
+  line-height: 1.05;
+}
+
+.edu-entry {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  padding: 36px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+.edu-entry:first-of-type {
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.edu-year {
+  font-family: "Barlow", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.22);
+  letter-spacing: 1px;
+  min-width: 90px;
+  padding-top: 3px;
+}
+
+.edu-dot {
+  width: 10px;
+  height: 10px;
+  background: #e8522a;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+
+.edu-degree {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #fff;
+  letter-spacing: 0.2px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.edu-school {
+  font-family: "Barlow", sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.38);
+}
+
+/* ══════════════════════════════════════════════════════
+   CTA SECTION  (matches portfolio's "Let's Work Together")
+══════════════════════════════════════════════════════ */
+.about-cta {
+  text-align: center;
+  padding: 90px 80px;
+  background: #1d2236;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.cta-subtext {
+  font-family: "Barlow", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.38);
+  letter-spacing: 0.5px;
+  margin-bottom: 14px;
+}
+
+.cta-headline {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 800;
+  font-size: clamp(32px, 5vw, 64px);
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  line-height: 1.0;
+  margin-bottom: 36px;
+}
+
+/* CTA primary button on dark bg */
+.about-cta .btn-primary {
+  font-size: 12px;
+  padding: 15px 38px;
+}
+
+/* ══════════════════════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════════════════════ */
+@media (max-width: 960px) {
+  .about-hero {
+    grid-template-columns: 1fr;
+    padding: 120px 30px 60px;
+    gap: 40px;
+  }
+  .hero-photo-col {
+    display: none;
+  }
+  .stats-bar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .stat-item:nth-child(2) {
+    border-right: none;
+  }
+  .profile-section {
+    grid-template-columns: 1fr;
+    padding: 60px 30px;
+    gap: 40px;
+  }
+  .about-skills-section {
+    padding: 60px 30px;
+  }
+  .skills-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .edu-section {
+    padding: 60px 30px;
+  }
+  .about-cta {
+    padding: 60px 30px;
+  }
+}
