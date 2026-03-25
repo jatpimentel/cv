@@ -1,0 +1,239 @@
+/* ── Page wrapper ────────────────────────────────────────────────────────── */
+.services-page {
+  min-height: 100vh;
+  font-family: "Manrope", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar sits on dark bg */
+.services-nav-wrapper {
+  background: #1e2035;
+}
+
+/* ── Services Section ────────────────────────────────────────────────────── */
+.services-section {
+  background: #fdf4ec;
+  padding: 5rem 8% 4rem;
+  text-align: center;
+  flex: 1;
+}
+
+.section-eyebrow {
+  color: #e8533a;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: #1e1a2e;
+  line-height: 1.15;
+  margin-bottom: 3rem;
+}
+
+/* Cards Grid */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 860px;
+  margin: 0 auto 2.5rem;
+}
+
+.service-card {
+  background: #ffffff;
+  border: 1px solid #ede8e0;
+  border-radius: 14px;
+  padding: 2rem 2rem 1.6rem;
+  text-align: left;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(0,0,0,0.08);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.card-icon {
+  width: 52px;
+  height: 52px;
+  background: #e8533a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1e1a2e;
+}
+
+.card-desc {
+  font-size: 0.88rem;
+  color: #6b6880;
+  line-height: 1.7;
+  margin-bottom: 1.6rem;
+}
+
+.learn-more {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: #1e1a2e;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: gap 0.2s;
+}
+
+.learn-more:hover {
+  gap: 0.9rem;
+}
+
+.plus-btn {
+  width: 30px;
+  height: 30px;
+  border: 1.5px solid #c5c0d0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: #1e1a2e;
+  flex-shrink: 0;
+}
+
+/* Explore line */
+.explore-line {
+  font-size: 0.92rem;
+  color: #6b6880;
+  margin-top: 1rem;
+}
+
+.explore-link {
+  color: #e8533a;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.explore-link:hover {
+  text-decoration: underline;
+}
+
+/* ── Skills Section ──────────────────────────────────────────────────────── */
+.skills-section {
+  background: #1e2035;
+  padding: 5rem 8% 5rem;
+  text-align: center;
+}
+
+.section-eyebrow.light {
+  color: #e8533a;
+}
+
+.section-title.light {
+  color: #ffffff;
+  margin-bottom: 3rem;
+}
+
+/* Skill bars */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.4rem 4rem;
+  max-width: 800px;
+  margin: 0 auto 3.5rem;
+  text-align: left;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.skill-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skill-name {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.skill-pct {
+  font-size: 0.82rem;
+  color: #9a9ab0;
+}
+
+.skill-bar-bg {
+  width: 100%;
+  height: 7px;
+  background: #2e3150;
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.skill-bar-fill {
+  height: 100%;
+  border-radius: 99px;
+  transition: width 1s ease;
+}
+
+/* Tech badge row */
+.tech-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  justify-content: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.badge {
+  background: #2a2d46;
+  color: #c5c5e0;
+  border: 1px solid #3a3d58;
+  padding: 0.45rem 1rem;
+  border-radius: 99px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  transition: background 0.2s, color 0.2s;
+}
+
+.badge:hover {
+  background: #e8533a;
+  color: #ffffff;
+  border-color: #e8533a;
+}
+
+/* ── Responsive ──────────────────────────────────────────────────────────── */
+@media (max-width: 700px) {
+  .cards-grid,
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-section,
+  .skills-section {
+    padding: 3rem 5%;
+  }
+}
