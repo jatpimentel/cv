@@ -33,7 +33,7 @@
 }
 
 /* ══════════════════════════════════════════════════════
-   HERO SECTION  (cream background — mirrors Services hero)
+   HERO SECTION
 ══════════════════════════════════════════════════════ */
 .about-hero {
   background-color: #f5f0e8;
@@ -124,32 +124,61 @@
   color: #1a1f2e;
 }
 
-/* Photo / avatar column */
+/* ── Photo column ─────────────────────────────────────── */
 .hero-photo-col {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.hero-avatar {
-  width: 280px;
-  height: 340px;
-  background: #f5c842;
-  border-radius: 140px 140px 0 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* ── About photo card (same language as Home, cream-adapted) ── */
+.about-photo-card {
   position: relative;
-  overflow: hidden;
+  width: 320px;
+  height: 400px;
+  flex-shrink: 0;
 }
 
-.hero-avatar-initials {
-  font-family: "Barlow Condensed", sans-serif;
-  font-weight: 800;
-  font-size: 72px;
-  color: rgba(0, 0, 0, 0.12);
-  letter-spacing: -3px;
-  user-select: none;
+.about-photo-frame {
+  width: 100%;
+  height: 100%;
+  border-radius: 28px;
+  overflow: hidden;
+  background: #ddd8ce;
+  box-shadow:
+    0 0 0 1px rgba(232, 82, 42, 0.18),
+    0 28px 70px rgba(26, 31, 46, 0.18);
+  transition: box-shadow 0.3s;
+}
+
+.about-photo-frame:hover {
+  box-shadow:
+    0 0 0 1px rgba(232, 82, 42, 0.35),
+    0 36px 80px rgba(26, 31, 46, 0.28);
+}
+
+.about-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 72% 8%;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.about-photo-frame:hover .about-photo {
+  transform: scale(1.03);
+}
+
+/* Decorative orange accent line on the left edge */
+.about-photo-accent {
+  position: absolute;
+  left: -14px;
+  top: 40px;
+  bottom: 40px;
+  width: 4px;
+  background: linear-gradient(to bottom, #e8522a, rgba(232, 82, 42, 0.08));
+  border-radius: 4px;
 }
 
 /* ══════════════════════════════════════════════════════
@@ -245,7 +274,7 @@
 }
 
 /* ══════════════════════════════════════════════════════
-   SKILLS SECTION  (cream — mirrors Services light section)
+   SKILLS SECTION  (cream)
 ══════════════════════════════════════════════════════ */
 .about-skills-section {
   background-color: #f5f0e8;
@@ -400,7 +429,7 @@
 }
 
 /* ══════════════════════════════════════════════════════
-   CTA SECTION  (matches portfolio's "Let's Work Together")
+   CTA SECTION
 ══════════════════════════════════════════════════════ */
 .about-cta {
   text-align: center;
@@ -429,7 +458,6 @@
   margin-bottom: 36px;
 }
 
-/* CTA primary button on dark bg */
 .about-cta .btn-primary {
   font-size: 12px;
   padding: 15px 38px;

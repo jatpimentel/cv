@@ -76,10 +76,6 @@ export default function Services() {
                 <h3 className="card-title">{s.title}</h3>
               </div>
               <p className="card-desc">{s.desc}</p>
-              <Link to="/contact" className="learn-more">
-                <span className="plus-btn">+</span>
-                Learn More
-              </Link>
             </div>
           ))}
         </div>

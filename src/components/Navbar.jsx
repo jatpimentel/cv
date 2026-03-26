@@ -6,6 +6,7 @@ const links = [
   { label: "About",    to: "/about"    },
   { label: "Services",  to: "/services"  },
   { label: "Projects", to: "/projects" },
+  { label: "Contact", to: "/contact"},
   //{ label: "Blog",     to: "/blog"     },
 ];
 
@@ -30,9 +31,6 @@ export default function Navbar() {
           </li>
         ))}
       </ul>
-
-      <Link to="/contact" className="btn-contact">CONTACT</Link>
-
       {/* Mobile Hamburger */}
       <button
         className="hamburger"
@@ -50,9 +48,7 @@ export default function Navbar() {
               <Link to={l.to} onClick={() => setMenuOpen(false)}>{l.label}</Link>
             </li>
           ))}
-          <li>
-            <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
-          </li>
+
         </ul>
       )}
     </nav>

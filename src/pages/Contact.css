@@ -1,0 +1,340 @@
+/* ── Google Fonts ─────────────────────────────────────────────────────────── */
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@700;800&display=swap");
+
+/* ── Reset ────────────────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Page ─────────────────────────────────────────────────────────────────── */
+.contact-page {
+  min-height: 100vh;
+  background: #161b27;
+  font-family: "Barlow", sans-serif;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-nav-wrapper {
+  background: #161b27;
+}
+
+/* ── Hero ─────────────────────────────────────────────────────────────────── */
+.contact-hero {
+  padding: 90px 8% 70px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  animation: fadeUp 0.6s ease both;
+}
+
+.contact-eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #e8522a;
+  margin-bottom: 18px;
+}
+
+.contact-title {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: clamp(52px, 7vw, 96px);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  line-height: 1.0;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.contact-subtitle {
+  font-size: 15px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.45);
+  line-height: 1.8;
+  max-width: 420px;
+}
+
+/* ── Body: two-column ─────────────────────────────────────────────────────── */
+.contact-body {
+  display: flex;
+  gap: 0;
+  flex: 1;
+  padding: 0 8%;
+}
+
+/* ── Left: direct links ───────────────────────────────────────────────────── */
+.contact-links {
+  flex: 0 0 42%;
+  padding: 60px 0 60px;
+  animation: fadeUp 0.6s ease 0.1s both;
+}
+
+.links-heading {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.3);
+  margin-bottom: 32px;
+}
+
+.contact-link-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 24px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 0.2s;
+  animation: fadeUp 0.5s ease both;
+}
+
+.contact-link-row:last-of-type {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.contact-link-row:hover {
+  color: #e8522a;
+}
+
+.contact-link-row:hover .link-arrow {
+  transform: translateX(6px);
+  color: #e8522a;
+}
+
+.link-num {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.2);
+  letter-spacing: 1px;
+  flex-shrink: 0;
+  width: 24px;
+}
+
+.link-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+}
+
+.link-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #e8522a;
+}
+
+.link-value {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: inherit;
+  transition: color 0.2s;
+}
+
+.link-hint {
+  font-size: 12px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.35);
+  margin-top: 2px;
+}
+
+.link-arrow {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.25);
+  transition: transform 0.2s, color 0.2s;
+  flex-shrink: 0;
+}
+
+/* Availability badge */
+.availability {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 36px;
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.45);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.avail-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #4ade80;
+  box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.2);
+  animation: pulse 2s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.2); }
+  50%       { box-shadow: 0 0 0 6px rgba(74, 222, 128, 0.08); }
+}
+
+/* ── Vertical divider ─────────────────────────────────────────────────────── */
+.contact-divider {
+  width: 1px;
+  background: rgba(255, 255, 255, 0.07);
+  margin: 0 6%;
+  flex-shrink: 0;
+}
+
+/* ── Right: form ──────────────────────────────────────────────────────────── */
+.contact-form {
+  flex: 1;
+  padding: 60px 0 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: fadeUp 0.6s ease 0.2s both;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.form-input {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  padding: 14px 16px;
+  font-family: "Barlow", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #ffffff;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+  resize: none;
+}
+
+.form-input::placeholder {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.form-input:focus {
+  border-color: #e8522a;
+  background: rgba(232, 82, 42, 0.04);
+}
+
+.form-textarea {
+  min-height: 140px;
+}
+
+.btn-send {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  align-self: flex-start;
+  background: #e8522a;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  padding: 15px 36px;
+  border-radius: 3px;
+  font-family: "Barlow", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  transition: background 0.2s, box-shadow 0.2s, gap 0.2s;
+  margin-top: 4px;
+}
+
+.btn-send:hover {
+  background: #cf3e1a;
+  box-shadow: 0 8px 28px rgba(232, 82, 42, 0.4);
+  gap: 18px;
+}
+
+.btn-arrow {
+  font-size: 16px;
+  transition: transform 0.2s;
+}
+
+/* ── Footer strip ─────────────────────────────────────────────────────────── */
+.contact-footer-strip {
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  padding: 20px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+/* ── Animation ────────────────────────────────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Responsive ───────────────────────────────────────────────────────────── */
+@media (max-width: 860px) {
+  .contact-hero {
+    padding: 60px 6% 50px;
+  }
+
+  .contact-body {
+    flex-direction: column;
+    padding: 0 6%;
+  }
+
+  .contact-links {
+    flex: unset;
+    padding: 50px 0 40px;
+  }
+
+  .contact-divider {
+    width: 100%;
+    height: 1px;
+    margin: 0;
+  }
+
+  .contact-form {
+    padding: 50px 0 60px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-footer-strip {
+    flex-direction: column;
+    gap: 6px;
+    text-align: center;
+    padding: 20px 6%;
+  }
+}

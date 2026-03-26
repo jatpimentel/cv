@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
+import jobertPhoto from "../assets/images/Jobert Grad.png";
 import "./About.css";
 
 const stats = [
@@ -66,9 +67,18 @@ export default function About() {
           </div>
         </div>
 
+        {/* ── Photo col — same card style as Home ───────── */}
         <div className="hero-photo-col">
-          <div className="hero-avatar">
-            <span className="hero-avatar-initials">JAP</span>
+          <div className="about-photo-card">
+            <div className="about-photo-frame">
+              <img
+                src={jobertPhoto}
+                alt="Job Aaron T. Pimentel"
+                className="about-photo"
+              />
+            </div>
+            {/* decorative accent line */}
+            <div className="about-photo-accent" />
           </div>
         </div>
       </section>
@@ -160,7 +170,7 @@ export default function About() {
               B.S. Information Technology
             </div>
             <div className="edu-school">
-              Ateneo de Davao University — Expected Graduation 2026
+              Ateneo de Davao University — Graduation 2026
             </div>
           </div>
         </div>
