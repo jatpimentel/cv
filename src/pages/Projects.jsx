@@ -8,7 +8,7 @@ import orderingImg from "../assets/images/ordering.png";
 import medicalImg  from "../assets/images/medical.png";
 import poolImg     from "../assets/images/pool.png";
 import karaokeImg  from "../assets/images/karaoke.png";
-
+import hrmsImg from "../assets/images/hrmsImg.png";
 const projects = [
   {
     id: 1,
@@ -90,6 +90,26 @@ const projects = [
       "Agile sprint delivery",
     ],
   },
+  {
+  id: 5,
+  tag: "Full Stack Development",
+  title: "Man Pro Management HRMS",
+  year: "2026",
+  desc: "Worked as a full stack developer intern building and maintaining HR management system features for Man Pro Management.",
+  longDesc:
+    "Served as a full stack developer intern for Man Pro Management, contributing to the development and enhancement of a Human Resource Management System (HRMS). Worked on both frontend and backend functionalities using Laravel and React, focusing on modules such as employee management, payroll processing, and attendance tracking. Collaborated with senior developers in debugging, API integration, and database optimization. Participated in agile workflows, implemented responsive UI components, and ensured system reliability through testing and iteration. Gained hands-on experience in deploying and maintaining applications in a production environment.",
+  tech: ["Laravel", "React", "MySQL", "REST API", "JavaScript", "PHP"],
+  link: "#",
+  bg: "linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%)",
+  img: hrmsImg,
+  highlights: [
+    "Developed HRMS modules (payroll, attendance, employee records)",
+    "Integrated RESTful APIs between Laravel backend and React frontend",
+    "Debugged and optimized database queries",
+    "Collaborated in agile development sprints",
+    "Deployed and maintained production-ready features",
+  ],
+  }
 ];
 
 export default function Projects() {
