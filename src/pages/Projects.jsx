@@ -9,6 +9,7 @@ import medicalImg  from "../assets/images/medical.png";
 import poolImg     from "../assets/images/pool.png";
 import karaokeImg  from "../assets/images/karaoke.png";
 import hrmsImg from "../assets/images/hrmsImg.png";
+import dinkiqImg from "../assets/images/dinkiq.png";
 const projects = [
   {
     id: 1,
@@ -109,7 +110,28 @@ const projects = [
     "Collaborated in agile development sprints",
     "Deployed and maintained production-ready features",
   ],
-  }
+  },
+    {
+    id: 6,
+    tag: "Full Stack Development",
+    title: "DinkIQ Pickleball Lessons Platform",
+    year: "2026",
+    desc: "A pickleball lessons website where players can browse lessons, book sessions, and track their progress through a skill-based dashboard.",
+    longDesc:
+      "Designed and built DinkIQ, a full stack web platform for pickleball lessons. The React frontend features a green-themed landing page with lesson cards and booking calls to action, a contact section, and a dashboard styled as a Kanban-like board where skills are columns and lessons are cards. The Django backend serves real lesson and skill data through a RESTful API. The app is deployed and live.",
+    tech: ["React", "Django", "REST API", "JavaScript", "CSS"],
+    link: "https://dinkiq-frontend.onrender.com", // ← replace with your deployed URL
+    bg: "linear-gradient(135deg, #1b5e20 0%, #66bb6a 100%)",
+    img: dinkiqImg, // swap for a screenshot import, see note below
+    highlights: [
+      "Responsive landing page with lesson booking",
+      "Skill-based dashboard (skills as columns, lessons as cards)",
+      "Django REST API connected to a live database",
+      "Contact and inquiry section",
+      "Deployed and publicly accessible",
+    ],
+  },
+
 ];
 
 export default function Projects() {
@@ -182,9 +204,22 @@ export default function Projects() {
                     </div>
                   </div>
 
+                  <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
                   <button className="btn-view" onClick={(e) => openModal(p, e)}>
                     View Project →
                   </button>
+                  {p.link && p.link !== "#" && (
+                    <a
+                      className="btn-view"
+                      href={p.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      Visit Live Site ↗
+                    </a>
+                  )}
+                </div>
                 </div>
               </div>
             </div>
